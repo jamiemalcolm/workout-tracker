@@ -47,7 +47,7 @@ export default function WorkoutDetailPage({ params }: { params: { id: string } }
   }
 
   return (
-    <div className="container py-6 space-y-6">
+    <div className="container max-w-4xl mx-auto py-6 space-y-6 px-4 sm:px-6">
       <div className="flex items-center gap-4">
         <Button variant="ghost" size="icon" onClick={() => router.push("/")}>
           <ArrowLeft className="h-5 w-5" />

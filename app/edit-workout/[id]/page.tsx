@@ -95,10 +95,10 @@ export default function EditWorkoutPage({ params }: { params: { id: string } }) 
   }
 
   return (
-    <div className="container py-6">
+    <div className="container max-w-4xl mx-auto py-6 px-4 sm:px-6">
       <h1 className="text-3xl font-bold tracking-tight mb-6">Edit Workout</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="mx-auto">
         <Card>
           <CardHeader>
             <CardTitle>Workout Details</CardTitle>

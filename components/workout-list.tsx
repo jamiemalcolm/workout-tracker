@@ -20,7 +20,7 @@ export function WorkoutList() {
   if (workouts.length === 0) {
     return (
       <Card className="bg-muted/50">
-        <CardContent className="flex flex-col items-center justify-center py-10 text-center">
+        <CardContent className="flex flex-col items-center justify-center py-10 text-center px-4 sm:px-6">
           <Dumbbell className="h-12 w-12 text-muted-foreground mb-4" />
           <h3 className="text-lg font-medium">No workouts yet</h3>
           <p className="text-muted-foreground mb-4">Start tracking your fitness journey today</p>
@@ -37,7 +37,7 @@ export function WorkoutList() {
       {workouts.map((workout) => (
         <Link key={workout.id} href={`/workout/${workout.id}`}>
           <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
-            <CardHeader className="pb-2">
+            <CardHeader className="pb-2 px-4 sm:px-6">
               <div className="flex justify-between items-start">
                 <CardTitle>{workout.name}</CardTitle>
                 <Badge variant={getWorkoutBadgeVariant(workout.type)}>{formatWorkoutType(workout.type)}</Badge>
@@ -47,12 +47,12 @@ export function WorkoutList() {
                 {format(new Date(workout.date), "MMMM d, yyyy")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-4 sm:px-6">
               <p className="text-sm text-muted-foreground">
                 {workout.exercises.length} exercise{workout.exercises.length !== 1 ? "s" : ""}
               </p>
             </CardContent>
-            <CardFooter className="flex justify-between pt-0">
+            <CardFooter className="flex justify-between pt-0 px-4 sm:px-6">
               <div className="text-xs text-muted-foreground">
                 {workout.exercises
                   .slice(0, 3)
@@ -87,4 +87,3 @@ function getWorkoutBadgeVariant(type: string) {
 function formatWorkoutType(type: string) {
   return type.charAt(0).toUpperCase() + type.slice(1)
 }
-

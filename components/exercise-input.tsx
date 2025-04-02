@@ -39,7 +39,7 @@ export function ExerciseInput({ exercise, onChange, onRemove, canRemove }: Exerc
   }
 
   return (
-    <div className="border rounded-md p-4 space-y-4">
+    <div className="border rounded-md p-4 space-y-4 w-full max-w-3xl mx-auto">
       <div className="flex items-center justify-between">
         <Label htmlFor={`exercise-${exercise.id}`}>Exercise Name</Label>
         {canRemove && (
@@ -81,7 +81,7 @@ export function ExerciseInput({ exercise, onChange, onRemove, canRemove }: Exerc
           </div>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 w-full max-w-lg mx-auto">
           {exercise.sets.map((set, index) => (
             <div key={index} className="grid grid-cols-2 gap-2">
               <div className="space-y-1">

@@ -6,7 +6,7 @@ import { WorkoutStats } from "@/components/workout-stats"
 
 export default function HomePage() {
   return (
-    <div className="container py-6 space-y-8">
+    <div className="container max-w-4xl mx-auto py-6 space-y-8 px-4 sm:px-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Workout Tracker</h1>
