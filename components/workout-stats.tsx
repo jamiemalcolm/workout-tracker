@@ -40,47 +40,47 @@ export function WorkoutStats() {
   }, [])
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total Workouts</CardTitle>
-          <Dumbbell className="h-4 w-4 text-muted-foreground" />
+    <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
+      <Card className="p-4 w-[280px]">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-0 pb-2">
+          <CardTitle className="text-xs font-medium">Total Workouts</CardTitle>
+          <Dumbbell className="h-3 w-3 text-muted-foreground" />
         </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">{stats.total}</div>
+        <CardContent className="p-0">
+          <div className="text-xl font-bold">{stats.total}</div>
           <p className="text-xs text-muted-foreground">Workouts logged</p>
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">This Week</CardTitle>
-          <Calendar className="h-4 w-4 text-muted-foreground" />
+      <Card className="p-4 w-[280px]">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-0 pb-2">
+          <CardTitle className="text-xs font-medium">This Week</CardTitle>
+          <Calendar className="h-3 w-3 text-muted-foreground" />
         </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">{stats.thisWeek}</div>
+        <CardContent className="p-0">
+          <div className="text-xl font-bold">{stats.thisWeek}</div>
           <p className="text-xs text-muted-foreground">Workouts this week</p>
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">This Month</CardTitle>
-          <Activity className="h-4 w-4 text-muted-foreground" />
+      <Card className="p-4 w-[280px]">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-0 pb-2">
+          <CardTitle className="text-xs font-medium">This Month</CardTitle>
+          <Activity className="h-3 w-3 text-muted-foreground" />
         </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">{stats.thisMonth}</div>
+        <CardContent className="p-0">
+          <div className="text-xl font-bold">{stats.thisMonth}</div>
           <p className="text-xs text-muted-foreground">Workouts this month</p>
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Current Streak</CardTitle>
-          <TrendingUp className="h-4 w-4 text-muted-foreground" />
+      <Card className="p-4 w-[280px]">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-0 pb-2">
+          <CardTitle className="text-xs font-medium">Current Streak</CardTitle>
+          <TrendingUp className="h-3 w-3 text-muted-foreground" />
         </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">{stats.streak}</div>
+        <CardContent className="p-0">
+          <div className="text-xl font-bold">{stats.streak}</div>
           <p className="text-xs text-muted-foreground">Consecutive days</p>
         </CardContent>
       </Card>
