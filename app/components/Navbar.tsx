@@ -1,10 +1,26 @@
 "use client"
 
-import { signOut } from "@/auth"
 import { Button } from "@/components/ui/button"
 import { LogOut } from "lucide-react"
 
 export function Navbar() {
+  const handleSignOut = async () => {
+    try {
+      const response = await fetch("/api/auth/signout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      
+      if (response.ok) {
+        window.location.href = "/"
+      }
+    } catch (error) {
+      console.error("Error signing out:", error)
+    }
+  }
+
   return (
     <nav className="border-b">
       <div className="container flex h-16 items-center justify-between">
@@ -13,7 +29,7 @@ export function Navbar() {
             Workout Tracker
           </a>
         </div>
-        <Button variant="ghost" size="sm" onClick={() => signOut({ redirectTo: "/" })}>
+        <Button variant="ghost" size="sm" onClick={handleSignOut}>
           <LogOut className="mr-2 h-4 w-4" />
           Sign Out
         </Button>
